@@ -1,0 +1,113 @@
+
+/* font definition */
+@font-face {
+    font-family:"OpenSans-Bold";
+    src: url(../font/Open_Sans/OpenSans-Bold.ttf);
+}
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: url(../font/Open_Sans/OpenSans-Regular.ttf);
+}
+
+
+
+body
+{
+    margin:0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    background-image: url(../image/unsplash-Ricardo\ Gomez\ Angel.jpeg);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;   
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.fld-cls
+{
+    /* blur background  */
+
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+
+    /* ---------------------------- */
+    
+    width: 480px;
+    height: 480px;
+    border-radius: 12px;
+    border: gray solid 3px;
+
+} 
+
+.par-txt
+{
+
+    margin-top: 66px;
+    font-family: 'OpenSans-Regular';
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 12px;
+    margin-right: 12px;
+    opacity: 0.9;
+    line-height: 2;
+
+}
+
+
+
+input
+{
+    width: 140px;
+    height:50px;
+    border:none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    font-family:'OpenSans-Bold';
+    margin-left: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    opacity: 0.8;  
+}
+
+.lgd
+{
+    /* Title locate center */
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+/* ------------------------------------- */
+
+/* multicolor title */
+
+    background-image:  linear-gradient(to right, rgb(0, 255, 136), rgb(100, 100, 170));
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text;
+    -moz-text-fill-color: transparent;
+
+    /* ----------------------------- */
+    font-family: 'OpenSans-Bold';
+    font-weight: 700;
+    font-size: 30px;
+    z-index: 2;
+    text-align: center;
+    opacity: 0.7;
+    padding-inline: 12px;
+} 
+ 
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .lgd{
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+      background-color: rgba(255, 255, 255, 0.5);  
+    }
+  }
